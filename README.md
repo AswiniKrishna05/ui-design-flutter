@@ -11,11 +11,12 @@ A modern and responsive attendance dashboard built using **Flutter**, mimicking 
 
 ## 📱 Features
 
-✅ Fully responsive layout  
-✅ Custom clipper for ribbon-style header  
-✅ Styled buttons, icons, and gradient design  
-✅ Reusable UI widgets  
-✅ Network images for avatar & logo
+- Horizontal tab navigation with smooth switching
+- Dynamic content rendering based on selected tab
+- Task cards with progress indicators and priority status
+- Sorting options (by Deadline or Project)
+- Work summary tab with quick stats
+- Visually appealing UI using Flutter Material design
 
 ---
 
@@ -31,4 +32,5 @@ A modern and responsive attendance dashboard built using **Flutter**, mimicking 
 ### 🏠 Home Screen
 ![Home Screen](screenshot/my_tasks.jpeg),
 ![Home Screen](screenshot/dashboard.jpeg),
-![Home Screen](screenshot/task_tracker.jpg),
+![Home Screen](screenshot/task_tracker.jpeg),
+![Home Screen](screenshot/work_summary.jpeg),
