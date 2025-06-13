@@ -29,4 +29,6 @@ A modern and responsive attendance dashboard built using **Flutter**, mimicking 
 ## 📸 Screenshots
 
 ### 🏠 Home Screen
-![Home Screen](screenshot/home_screen.jpeg)
+![Home Screen](screenshot/my_tasks.jpeg),
+![Home Screen](screenshot/dashboard.jpeg),
+![Home Screen](screenshot/task_tracker.jpg),
