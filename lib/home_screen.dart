@@ -3,8 +3,8 @@ import 'package:ui_design_flutter/widgets/bottom_bar.dart';
 import 'package:ui_design_flutter/widgets/dashboard_grid.dart';
 import 'package:ui_design_flutter/widgets/greetingCard.dart';
 import 'package:ui_design_flutter/widgets/headerCard.dart';
-import 'package:ui_design_flutter/widgets/my_tasks.dart';
 import 'package:ui_design_flutter/widgets/overview_row.dart';
+import 'package:ui_design_flutter/widgets/task_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,14 +19,14 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children:  [
               HeaderCard(),
               SizedBox(height: 40),
               Text(
                 "Good Morning,\nHemant Rangarajan",
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey,
+                  color: Colors.grey[700],
                 ),
               ),
               SizedBox(height: 12),
@@ -42,7 +42,9 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 12),
               OverviewRow(),
               SizedBox(height: 28),
-              Mytasks(),
+              TaskSection(),
+              Divider(thickness: 1,),
+              SizedBox(height: 24),
               Text(
                 'Dashboard',
                 style: TextStyle(
@@ -58,22 +60,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-class RibbonClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    const r = 26.0;
-    final path = Path()
-      ..lineTo(size.width - r, 0)
-      ..quadraticBezierTo(size.width, 0, size.width, r)
-      ..lineTo(size.width, size.height - r)
-      ..quadraticBezierTo(size.width, size.height, size.width - r, size.height)
-      ..lineTo(0, size.height)
-      ..close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(_) => false;
 }

@@ -31,10 +31,9 @@ class HeaderCard extends StatelessWidget {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
                         image: DecorationImage(
                           image: NetworkImage(
-                            "https://experis.be/wp-content/uploads/2023/05/Online-web-developer-profile-1200x675.jpg",
+                            "https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg",
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -67,7 +66,7 @@ class HeaderCard extends StatelessWidget {
               ),
               const Positioned(
                 top: 1,
-                right: -1,
+                right: -4,
                 child: CircleAvatar(
                   backgroundImage: AssetImage('assets/ziya_logo.png'),
                   radius: 32,

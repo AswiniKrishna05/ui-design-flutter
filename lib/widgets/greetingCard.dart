@@ -5,55 +5,90 @@ class GreetingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFFF2F8FA),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE4EDED)),
-      ),
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text("You haven't Checked-in yet",
-              style: TextStyle(color: Colors.red)),
-          const SizedBox(height: 14),
-          Row(
-            children: [
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(Icons.credit_score_rounded),
-                  label: const Text('Check in'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF008CFF),
-                    foregroundColor: Colors.white,
-                    minimumSize: const Size.fromHeight(44),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6)),
+    return Card(
+      elevation: 4,
+      margin: EdgeInsets.all(16),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '"You are Checked-in 09:00 AM"',
+              style: TextStyle(
+                color: Colors.green[700],
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Icon(Icons.access_time, color: Colors.orange),
+                SizedBox(width: 8),
+                Text(
+                  '09:20 am, 11-06-2025',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black87,
                   ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: null,
-                  icon: const Icon(Icons.logout_rounded),
-                  label: const Text('Check Out'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFB8B8B8),
-                    foregroundColor: Colors.white,
-                    disabledBackgroundColor: Color(0xFFB8B8B8),
-                    disabledForegroundColor: Colors.white,
-                    minimumSize: const Size.fromHeight(44),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6)),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Icon(Icons.location_pin, color: Colors.red),
+                SizedBox(width: 8),
+                Text(
+                  'Location/IP (for remote attendance)',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black87,
                   ),
                 ),
-              ),
-            ],
-          )
-        ],
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed: null,
+                    icon: Icon(Icons.login),
+                    label: Text("Check In"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[300],
+                      foregroundColor: Colors.grey[600],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      // Add Check Out logic here
+                    },
+                    icon: Icon(Icons.logout),
+                    label: Text("Check Out"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
